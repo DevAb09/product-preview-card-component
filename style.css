@@ -1,211 +1,152 @@
-* {
-    padding: 0px;
-    margin: 0px;
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@700&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit&family=Young+Serif&display=swap');@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@700&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit&family=Young+Serif&display=swap');
+
+*{
+    margin:0;
+    padding:0px;
     box-sizing: border-box;
-    text-decoration: none;
-    font-family: "Outfit", sans-serif;
 }
 
+
 body{
-    background-color: hsl(30, 54%, 90%);
+    font-family: 'Montserrat', sans-serif;
+    background-color: hsl(30, 38%, 92%);
+    font-size: 14px;
     min-height: 100vh;
     display: flex;
-    width: 100%;
     justify-content: center;
     align-items: center;
 }
 
+
+
 .container {
-    width: clamp(400px, 50vw, 700px);
-    margin: 5em auto;
-    background-color: white;
-    padding: 30px;
-    border-radius: 20px;
+    margin: 30px auto;
+    padding: 0 30px;
+}
+
+.grid {
+    max-width: 700px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+
+}
+
+.img img {
+    max-width: 100%;
+    display: inherit;
+}
+
+.card-content {
+    padding: 35px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
-}
-.container img {
-    height: 100%;
-    width: 100%;
-    border-radius: 10px;
+    justify-content: space-between;
 }
 
-.container h1 {
-    font-family: "Young Serif", serif;
-    font-size: 40px;
+h6.pro-cat{
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 13px;
+    color: hsl(228, 12%, 48%);
     font-weight: 500;
-    margin-top: 10px;
-    margin-bottom: 0px;
-    padding-bottom: 0px;
-    color:hsl(24, 5%, 18%);
 }
 
-.container p {
-    font-size: 16px;
-    color: hsl(30, 10%, 34%);
-    margin-top: 0px;
-    padding-top: 0px;
+.pro-name {
+    font-family: 'Francis', serif;
+    font-size: 40px;
+    line-height: 1em;
+    color: hsl(212, 21%, 14%);
 }
 
-.preparation {
-    background-color: hsl(330, 100%, 98%);
-    padding: 40px;
-    padding-bottom: 20px;
-    font-size: 15px;
+p.pre-des {
+    color: hsl(228, 12%, 48%);
+    line-height: 1.6em;
 }
 
-.preparation h2 {
-    font-size: 20px;
-    color: hsl(332, 51%, 32%);
-    margin-left: -15px;
-    margin-bottom: 20px;
-    margin-top: -15px;
+.price{
+    display: flex;
+    align-items: center;
 }
 
-span.bold {
-    font-weight: bold;
-    padding-right: 3px;
-    padding-left: 6px;
-    color: hsl(30, 10%, 34%);
-}
-
-ul {
-    padding-left: 10px;
-    margin-top: -5px;
-    color: hsl(14, 45%, 36%);
-}
-
-li {
-    padding-bottom: 10px;
-    color: hsl(14, 45%, 36%);
-}
-
-.ingredients-container h2 {
-    font-family: "Young Serif", serif;
-    color: hsl(14, 45%, 36%);
-    font-weight: 570;}
-
-.ingredients-container ul {
-    margin-left: 12px;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    margin-left: 15px;
-    color: hsl(14, 45%, 36%);
-
-    
-}
-
-.ingredients-container li {
-    color: hsl(14, 45%, 36%);
-}
-
-ul li {
- padding-left: 10px;
-}
-
-.ingredients-container {
-    color:hsl(14, 45%, 36%);
-    border-bottom: 1px solid hsl(30, 10%, 34%);
-}
-
-.instructions-container {
-    border-bottom: 1px solid hsl(30, 10%, 34%);
-}
-.instructions-container h2{
-    font-family: "Young Serif", serif;
-    color: hsl(14, 45%, 36%);
-    font-weight: 570;
-}
-
-.instructions-container li {
-    color: hsl(14, 45%, 36%);
-    font-size: 16px;
+p.current-price {
+    font-family: 'Francis', serif;
+    color:hsl(158, 36%, 37%);
+    font-size:25px;
+    padding-right: 15px;
 }
 
 
-.instruction {
-    color: hsl(30, 10%, 34%);
-    
+p.old-price{
+    color:hsl(158, 42%, 18%);
+    text-decoration: line-through;
 }
 
-.instructionBold {
-    font-weight: bold;
+button.cta{
+    background-color: hsl(158, 36%, 37%);
+    border: none;
+    padding: 14px 0;
+    border-radius: 12px;
+    color: #fff;
+    font-size:14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color .3s ease;
 }
 
-
-ol {
-    font-size: 16px;
-    margin-top: 15px;
-    margin-left: 20px;
+button.cta:hover{
+    background-color: hsl(158, 36%, 23%);
 }
 
-ol li {padding-left: 15px;}
-
-.Nutrition-container h2 {
-    font-family: "Young Serif", serif;
-    color: hsl(14, 45%, 36%);
-    font-weight: 570;}
-
-.nutrition-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-    font-size: 16px;
-    color: hsl(14, 45%, 36%);
+button.cta img{
+    padding-right: 7px;
 }
 
-.nutrition-table th{ color:hsl(30, 10%, 34%);
-    font-weight: 100;
-
-text-align: left;}
-.nutrition-table th,
-.nutrition-table td {
-    padding: 12px 0;
-    border-bottom: 1px solid hsl(30, 18%, 87%);
-}
-      
-.nutrition-table td {
-    font-weight: bold;
-    color: hsl(14, 45%, 36%);
-}
-      
-
-/* @media (min-width: 768px) {
-    body {
-      background-color: hsl(30, 54%, 90%);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
+@media only screen and (max-width: 628px){
+    .grid{
+        grid-template-columns: 1fr;
     }
-  
-    .container {
-      width: clamp(600px, 50vw, 750px);
-      padding: 40px;
-      border-radius: 25px;
-      margin: 50px auto;
+    .img img{
+        max-height: 450px;
+        width: 100%;
+        object-fit: cover;
     }
-  
-    .container img {
-      border-radius: 20px;
+    .card-content{
+        display: block;
     }
-  
-    h1 {
-      font-size: 36px;
+    h6.pro-cat, h2.pro-name, p.pro-des, .price{
+        padding-bottom: 23px;
     }
-  
-    p,
-    ul, 
-    ol,
-    .nutrition-table th,
-    .nutrition-table td {
-      font-size: 18px;
+}
+
+@media only screen and (max-width: 375px){
+    .container{
+        margin: 15px auto;
+        padding: 0 15px;
     }
-  
-    .nutrition-table th,
-    .nutrition-table td {
-      padding: 15px 0;
+    .img img{
+        max-height: 290px;
     }
-  } */
-  
+    .card-content{
+        padding: 24px;
+    }
+    h6.pro-cat, h2.pro-name, p.pro-des, .price{
+        padding-bottom: 16px;
+    }
+    h2.pro-name{
+        font-size: 28px;
+    }
+    p.pro-des{
+        font-size: 12px;
+    }
+    p.current-price{
+        font-size: 23px;
+    }
+    button.cta{
+        padding: 12px 0;
+        font-size: 13px;
+    }
+}
+
